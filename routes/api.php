@@ -13,4 +13,5 @@ Route::apiResource('carreras', CarreraController::class);
 Route::apiResource('grupos', GrupoController::class);
 Route::apiResource('alumnos', AlumnoController::class);
 Route::apiResource('materias', MateriaController::class);
-Route::post('alumnos/{id}/asignar-materia', [AlumnoController::class, 'asignarMateria']);
+Route::post('alumnos/{id}/materias', [AlumnoController::class, 'asignarMateria']);
+

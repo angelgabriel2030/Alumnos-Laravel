@@ -6,9 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Universidad extends Model
 {
+    protected $table = 'universidades';
     protected $fillable = [
         'nombre',
-        'ciudad'
+        'direccion'
     ];
 
     public function carreras(){
