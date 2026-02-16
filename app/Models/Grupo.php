@@ -8,9 +8,8 @@ class Grupo extends Model
 {
     protected $fillable = [
         'nombre', 
-        'grado',
-        'nivel',
-        'carrera_id'
+        'carrera_id', 
+        'tutor_id'
     ];
 
     public function carrera(){
@@ -19,5 +18,9 @@ class Grupo extends Model
 
     public function alumnos(){
         return $this->hasOne(Alumno::class);
+    }
+
+    public function tutor(){
+        return $this->belongsTo(Tutor::class);
     }
 }

@@ -4,19 +4,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Carrera extends Model
-{
+class Tutor extends Model {
+    protected $table = 'tutores';
     protected $fillable = [
         'nombre',
         'universidad_id'
-    ];
+        ];
 
-    public function universidad()
+    public function fotos()
     {
-        return $this->belongsTo(Universidad::class);
+        return $this->morphMany(Foto::class, 'imageable');
     }
 
-    public function grupos(){
+    public function grupos()
+    {
         return $this->hasMany(Grupo::class);
     }
 }

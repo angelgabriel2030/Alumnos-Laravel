@@ -7,6 +7,7 @@ use App\Http\Controllers\CarreraController;
 use App\Http\Controllers\GrupoController;
 use App\Http\Controllers\AlumnoController;
 use App\Http\Controllers\MateriaController;
+use App\Http\Controllers\TutorController;
 
 Route::apiResource('universidades', UniversidadController::class);
 Route::apiResource('carreras', CarreraController::class);
@@ -14,4 +15,6 @@ Route::apiResource('grupos', GrupoController::class);
 Route::apiResource('alumnos', AlumnoController::class);
 Route::apiResource('materias', MateriaController::class);
 Route::post('alumnos/{id}/materias', [AlumnoController::class, 'asignarMateria']);
+Route::apiResource('tutores', TutorController::class);
+
 

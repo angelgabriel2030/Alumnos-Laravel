@@ -8,8 +8,7 @@ class Universidad extends Model
 {
     protected $table = 'universidades';
     protected $fillable = [
-        'nombre',
-        'direccion'
+        'nombre'
     ];
 
     public function carreras(){

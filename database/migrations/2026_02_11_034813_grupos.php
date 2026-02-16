@@ -17,6 +17,10 @@ return new class extends Migration
             $table->foreignId('carrera_id')
               ->constrained('carreras')
               ->onDelete('cascade');
+              $table->foreignId('tutor_id')
+      ->constrained('tutores')
+      ->cascadeOnDelete();
+
             $table->timestamps();
 });
     }

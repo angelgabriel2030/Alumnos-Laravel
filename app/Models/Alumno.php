@@ -9,7 +9,6 @@ class Alumno extends Model
     protected $table = 'alumnos';
     protected $fillable = [
         'nombre',
-        'email',
         'grupo_id',
     ];
 
@@ -21,5 +20,9 @@ class Alumno extends Model
     public function materias()
     {
         return $this->belongsToMany(Materia::class, 'alumno_materia');
+    }
+
+    public function fotos(){
+        return $this->morphMany(Foto::class, 'imageable');
     }
 }

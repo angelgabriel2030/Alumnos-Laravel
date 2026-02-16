@@ -23,4 +23,5 @@ class CarreraController extends Controller
 
         return response()->json($carrera, 201);
     }
+    
 }
