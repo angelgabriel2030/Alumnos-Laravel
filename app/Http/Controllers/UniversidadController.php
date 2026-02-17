@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Universidad;
 
+use App\Models\Universidad;
 use Illuminate\Http\Request;
 
 class UniversidadController extends Controller
