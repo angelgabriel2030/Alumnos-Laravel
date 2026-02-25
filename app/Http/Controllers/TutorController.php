@@ -16,7 +16,7 @@ class TutorController extends Controller
     {
         return Tutor::create($request->all());
     }
-
+    
     public function show($id)
     {
         return Tutor::with('fotos')->findOrFail($id);

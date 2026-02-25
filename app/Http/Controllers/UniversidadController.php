@@ -20,7 +20,6 @@ class UniversidadController extends Controller
         ]);
 
         $universidad = Universidad::create($request->all());
-
         return response()->json($universidad, 201);
     }
 }
